@@ -1,12 +1,8 @@
 import React from 'react';
-import LoginForm from './components/loginform';
+import MainRoutes from "./navigators/main.routes";
 
 function App() {
-  return (
-    <div className="page">
-        <LoginForm/>        
-    </div>
-  );
+  return <MainRoutes />;
 }
 
 export default App;
