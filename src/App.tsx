@@ -1,4 +1,3 @@
-import React from 'react';
 import MainRoutes from "./navigators/main.routes";
 
 function App() {

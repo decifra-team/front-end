@@ -1,13 +1,15 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 
 import LoginPage from "../pages/login.page";
+import HomePage from "../pages/home";
 
 const MainRoutes: React.FC = () => {
-    return (
-        <Routes>
-            <Route path="/*" element={<LoginPage />} />
-        </Routes>
-    );
-  };
-  export default MainRoutes;
+  return (
+    <Routes>
+      <Route path="/" element={<LoginPage />} />
+      <Route path="/home" element={<HomePage />} />
+    </Routes>
+  );
+};
+export default MainRoutes;
