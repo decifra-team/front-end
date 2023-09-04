@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Stack, Box, Button, Typography, Grid, TextField } from "@mui/material";
-//!TROCAR A LOGO (PRECISA DE TEXTO)
+import { Stack, Box, Button, Typography, Grid, TextField, colors } from "@mui/material";
 import logo from "../images/logo.svg";
 import { useNavigate } from "react-router-dom";
 
@@ -16,6 +15,7 @@ const LoginPage: React.FC = () => {
                 display="flex"
                 px={10}
                 pt={8}
+                height="96.7vh"
             >
                 <Grid item xl={7} lg={7} md={7} sm={7} xs={6}>
                     <Box display="flex" alignItems="right" justifyContent="right">
@@ -23,9 +23,9 @@ const LoginPage: React.FC = () => {
                     </Box>
                 </Grid>
                 <Grid item xl={5} lg={5} md={5} sm={5} xs={6}>
-                    <Box alignItems="center" justifyContent="center" width="80%">
+                    <Box alignItems="center" justifyContent="center" width="80%" marginTop={10}>
                         <form>
-                            <Typography fontSize={30} color="#071560" align="center">
+                            <Typography fontSize={40} fontWeight="bold" color="#071560" align="center" marginBottom={5}>
                                 Login
                             </Typography>
                             <Grid container
@@ -74,11 +74,23 @@ const LoginPage: React.FC = () => {
                                 </Grid>
 
                             </Grid>
-
                         </form>
                     </Box>
                 </Grid>
             </Grid>
+            {/* <Box
+                sx={{
+                    backgroundColor: "#0a1f90", display: "flex",
+                    justifyContent: "center",
+                    top: "auto",
+                    bottom: 0
+                }}
+                alignItems="bottom"
+            >
+                <Typography fontSize={30} color="white" align="left">
+                    Parceiros
+                </Typography>
+            </Box> */}
         </>
     )
 }
