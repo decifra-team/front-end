@@ -15,7 +15,6 @@ const LoginPage: React.FC = () => {
                 display="flex"
                 px={10}
                 pt={8}
-                height="96.7vh"
             >
                 <Grid item xl={7} lg={7} md={7} sm={7} xs={6}>
                     <Box display="flex" alignItems="right" justifyContent="right">
@@ -78,19 +77,6 @@ const LoginPage: React.FC = () => {
                     </Box>
                 </Grid>
             </Grid>
-            {/* <Box
-                sx={{
-                    backgroundColor: "#0a1f90", display: "flex",
-                    justifyContent: "center",
-                    top: "auto",
-                    bottom: 0
-                }}
-                alignItems="bottom"
-            >
-                <Typography fontSize={30} color="white" align="left">
-                    Parceiros
-                </Typography>
-            </Box> */}
         </>
     )
 }
