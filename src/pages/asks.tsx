@@ -8,7 +8,7 @@ import { Box, Button, Typography } from "@mui/material";
 import relogio from "../images/relogio.png";
 import livro from "../images/livro.png";
 
-const HomePage: React.FC = () => {
+const Asks: React.FC = () => {
   async function callAsks(){
     try {
       
@@ -117,9 +117,6 @@ const HomePage: React.FC = () => {
               display: "flex",
             }}
             variant="contained"
-            onClick={()=>{
-              navigate("/asks")
-            }}
           >
             Iniciar teste
           </Button>
@@ -129,4 +126,4 @@ const HomePage: React.FC = () => {
   );
 };
 
-export default HomePage;
+export default Asks;
