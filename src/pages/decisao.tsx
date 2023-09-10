@@ -5,7 +5,7 @@ import { Header } from "../components/Header";
 import relogio from "../images/relogio.png";
 import livro from "../images/livro.png";
 
-const HomePage: React.FC = () => {
+const Decisao: React.FC = () => {
   const navigate = useNavigate();
   return (
     <Box>
@@ -25,7 +25,7 @@ const HomePage: React.FC = () => {
           marginBottom={15}
           marginTop={10}
         >
-          Teste de personalidade
+          Teste de tomada de decisão
         </Typography>
         <Box
           sx={{
@@ -56,7 +56,7 @@ const HomePage: React.FC = () => {
               Duração
             </Typography>
             <Typography fontSize={16} color="#071560" align="center">
-              15 minutos
+              20 minutos
             </Typography>
           </Box>
           <Box
@@ -110,4 +110,4 @@ const HomePage: React.FC = () => {
   );
 };
 
-export default HomePage;
+export default Decisao;

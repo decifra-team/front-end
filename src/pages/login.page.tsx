@@ -62,7 +62,7 @@ const LoginPage: React.FC = () => {
                     variant="contained"
                     type="button"
                     onClick={() => {
-                      navigate("/home");
+                      navigate("/personalidade");
                     }}
                   >
                     Entrar
