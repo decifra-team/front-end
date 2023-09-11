@@ -93,7 +93,7 @@ const Asks: React.FC = () => {
           display: "flex",
           justifyContent: "center",
           flexDirection: "column",
-          gap: 3,
+          gap: 8,
         }}
       >
         {Perguntas.map((item) => (
