@@ -15,7 +15,7 @@ const LoginPage: React.FC = () => {
   async function callLogin() {
     try {
       const response = await getToken(id, password);
-      navigate("/home");
+      navigate("/personalidade");
     } catch (error) {
       toast.error("Usuário ou senha errado!");
     }
