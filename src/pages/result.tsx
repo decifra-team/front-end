@@ -1,11 +1,13 @@
 import { Box, Typography } from "@mui/material";
 import React from "react";
-import { useNavigate } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import "react-toastify/dist/ReactToastify.css";
 import { Header } from "../components/Header";
 
-const Result: React.FC = (personality: any) => {
-  const navigate = useNavigate();
+const Result: React.FC = () => {
+  const { personality } = useParams();
+
+  console.log(personality);
 
   return (
     <Box>
@@ -34,7 +36,7 @@ const Result: React.FC = (personality: any) => {
             fontSize: 40,
           }}
         >
-          Lógico
+          {personality}
         </Typography>
       </Box>
     </Box>
