@@ -14,7 +14,7 @@ const MainRoutes: React.FC = () => {
       <Route path="/personalidade" element={<Personalidade />} />
       <Route path="/decisao" element={<Decisao />} />
       <Route path="/asks" element={<Asks />} />
-      <Route path="/result" element={<Result />} />
+      <Route path="/result/:personality" element={<Result />} />
     </Routes>
   );
 };
