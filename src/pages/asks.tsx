@@ -128,6 +128,8 @@ const Asks: React.FC = () => {
           justifyContent: "center",
           flexDirection: "column",
           gap: 8,
+          paddingTop: 10,
+          paddingBottom: 10,
         }}
       >
         {perguntas.map((item) => (
