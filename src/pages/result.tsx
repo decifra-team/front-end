@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import "react-toastify/dist/ReactToastify.css";
 import { Header } from "../components/Header";
 
-const Result: React.FC = () => {
+const Result: React.FC = (personality: any) => {
   const navigate = useNavigate();
 
   return (
