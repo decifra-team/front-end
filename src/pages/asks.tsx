@@ -1,25 +1,27 @@
-import { Box, Button, Typography } from "@mui/material";
 import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import "react-toastify/dist/ReactToastify.css";
 import { Header } from "../components/Header";
-import livro from "../images/livro.png";
-import relogio from "../images/relogio.png";
 import { getAsk } from "../services/calls";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { Box, Button, Typography } from "@mui/material";
+import relogio from "../images/relogio.png";
+import livro from "../images/livro.png";
 
-const Personalidade: React.FC = () => {
-  async function callAsks() {
+const Asks: React.FC = () => {
+  async function callAsks(){
     try {
+      
       const response = await getAsk();
     } catch (error) {
       console.log("erro: ", error);
-      console.info("teste");
+      console.info('teste')
     }
   }
 
-  useEffect(() => {
-    callAsks();
-  }, []);
+  useEffect(()=>{
+    callAsks()
+  },[])
   const navigate = useNavigate();
   return (
     <Box>
@@ -115,9 +117,6 @@ const Personalidade: React.FC = () => {
               display: "flex",
             }}
             variant="contained"
-            onClick={() => {
-              navigate("/asks");
-            }}
           >
             Iniciar teste
           </Button>
@@ -127,4 +126,4 @@ const Personalidade: React.FC = () => {
   );
 };
 
-export default Personalidade;
+export default Asks;
