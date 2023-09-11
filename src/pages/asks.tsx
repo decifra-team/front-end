@@ -1,5 +1,5 @@
 import { Box } from "@mui/material";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "react-toastify/dist/ReactToastify.css";
 import { Header } from "../components/Header";
@@ -7,14 +7,36 @@ import { Selector } from "../components/Selector";
 import { getAsk } from "../services/calls";
 
 const Asks: React.FC = () => {
+
+  const [total, setTotal] = useState(0)
+  const [num, setNum] = useState(0)
+  const [perguntas, setPerguntas] = useState([])
+
   async function callAsks() {
     try {
       const response = await getAsk();
+      console.log("🚀 ~ file: asks.tsx:13 ~ callAsks ~ response:", response.data)
+      setPerguntas(response.data)
     } catch (error) {
       console.log("erro: ", error);
       console.info("teste");
     }
   }
+
+
+
+  useEffect(()=>{
+    if(total == 0){
+      setTotal(num)
+    }else{
+      setTotal(total + num)
+    }
+    setNum(0)
+  },[num])
+
+  useEffect(()=>{
+    console.log('TOTAL: ', total)
+  },[total])
 
   useEffect(() => {
     callAsks();
@@ -96,8 +118,8 @@ const Asks: React.FC = () => {
           gap: 8,
         }}
       >
-        {Perguntas.map((item) => (
-          <Selector ask={item} />
+        {perguntas.map((item) => (
+          <Selector ask={item} setNum={setNum} />
         ))}
       </Box>
     </Box>

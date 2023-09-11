@@ -16,7 +16,7 @@ export const getToken = async (user:any, value:any) => {
 export const getAsk = async() => { 
     const response = server.get(`/asks`);
     response.then(function(resolve){
-        console.log("🚀 ~ fxile: index.ts:20 ~ response.then ~ resolve.data:", resolve.data)
+        // console.log("🚀 ~ fxile: index.ts:20 ~ response.then ~ resolve.data:", resolve.data)
         return resolve.data
     }).catch(e => {
         console.log('IH' ,e)
