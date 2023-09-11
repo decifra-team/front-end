@@ -28,7 +28,6 @@ const Asks: React.FC = () => {
     try {
       const response = await getMbti(60);
       console.log("🚀 ~ file: asks.tsx:13 ~ callAsks ~ response:", response.data)
-      
     } catch (error) {
       console.log("erro: ", error);
       console.info("teste");
