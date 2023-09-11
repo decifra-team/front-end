@@ -24,3 +24,15 @@ export const getAsk = async() => {
     })
     return response;
 }
+
+export const getMbti = async(value:any) => { 
+    const response = server.get(`/mbti?total=${value}`);
+    response.then(function(resolve){
+        console.log("🚀 ~ fxile: index.ts:20 ~ response.then ~ resolve.data:", resolve.data)
+        return resolve.data
+    }).catch(e => {
+        console.log('IH' ,e)
+        return e;
+    })
+    return response;
+}

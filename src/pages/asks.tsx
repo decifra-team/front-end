@@ -1,10 +1,11 @@
-import { Box } from "@mui/material";
+import { Box, Button } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "react-toastify/dist/ReactToastify.css";
 import { Header } from "../components/Header";
 import { Selector } from "../components/Selector";
 import { getAsk } from "../services/calls";
+import { getMbti } from "../services/calls";
 
 const Asks: React.FC = () => {
 
@@ -17,6 +18,17 @@ const Asks: React.FC = () => {
       const response = await getAsk();
       console.log("🚀 ~ file: asks.tsx:13 ~ callAsks ~ response:", response.data)
       setPerguntas(response.data)
+    } catch (error) {
+      console.log("erro: ", error);
+      console.info("teste");
+    }
+  }
+
+  async function callMbti() {
+    try {
+      const response = await getMbti(60);
+      console.log("🚀 ~ file: asks.tsx:13 ~ callAsks ~ response:", response.data)
+      
     } catch (error) {
       console.log("erro: ", error);
       console.info("teste");
@@ -121,6 +133,9 @@ const Asks: React.FC = () => {
         {perguntas.map((item) => (
           <Selector ask={item} setNum={setNum} />
         ))}
+      <Button variant="text" onClick={()=>{
+callMbti()
+      }}>Finalizar</Button>
       </Box>
     </Box>
   );
